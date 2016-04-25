@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainVC" id="BYZ-38-t0r" customClass="ViewController" customModule="SlideMenuExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qK-S0-Evk">
+                                <rect key="frame" x="221" y="289" width="158" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="BGs-dl-KlM"/>
+                                    <constraint firstAttribute="height" constant="21" id="ldp-Uy-UKb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6qK-S0-Evk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Nwh-C3-0eA"/>
+                            <constraint firstItem="6qK-S0-Evk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zg7-rl-1Hp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Left Menu View Controller-->
+        <scene sceneID="X8c-Ny-ZSb">
+            <objects>
+                <viewController storyboardIdentifier="LeftVC" id="OvR-V7-y0I" customClass="LeftMenuViewController" customModule="SlideMenuExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Miv-sl-FM8"/>
+                        <viewControllerLayoutGuide type="bottom" id="8mD-Bh-R8b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k2X-WO-5k4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tF0-c5-Ooe">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="6Ip-eZ-j05">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Ip-eZ-j05" id="iPi-O1-FAb">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="OvR-V7-y0I" id="XfJ-TL-AoA"/>
+                                    <outlet property="delegate" destination="OvR-V7-y0I" id="m2U-cV-LSl"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tF0-c5-Ooe" firstAttribute="top" secondItem="k2X-WO-5k4" secondAttribute="top" id="BBS-mI-juu"/>
+                            <constraint firstAttribute="trailing" secondItem="tF0-c5-Ooe" secondAttribute="trailing" id="Wo0-BF-srd"/>
+                            <constraint firstItem="8mD-Bh-R8b" firstAttribute="top" secondItem="tF0-c5-Ooe" secondAttribute="bottom" id="f0S-7v-rX7"/>
+                            <constraint firstItem="tF0-c5-Ooe" firstAttribute="leading" secondItem="k2X-WO-5k4" secondAttribute="leading" id="vnC-XE-mhq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="leftTableView" destination="tF0-c5-Ooe" id="pce-wu-uLP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nIZ-zU-Ave" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853" y="265"/>
+        </scene>
+        <!--Next View Controller-->
+        <scene sceneID="XH7-IR-BEl">
+            <objects>
+                <viewController storyboardIdentifier="NextVC" id="Zna-ea-6fP" customClass="NextViewController" customModule="SlideMenuExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zbQ-a4-Ts3"/>
+                        <viewControllerLayoutGuide type="bottom" id="BQx-pM-CbF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Eu3-5x-SI5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rI-Vw-61B">
+                                <rect key="frame" x="222" y="290" width="157" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Fbp-86-b2t"/>
+                                    <constraint firstAttribute="width" constant="157" id="vYn-Fx-pUZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1rI-Vw-61B" firstAttribute="centerY" secondItem="Eu3-5x-SI5" secondAttribute="centerY" id="Xcw-jN-73z"/>
+                            <constraint firstItem="1rI-Vw-61B" firstAttribute="centerX" secondItem="Eu3-5x-SI5" secondAttribute="centerX" id="nhq-3F-hHc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextLbl" destination="1rI-Vw-61B" id="g2r-Xx-fn1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ey7-en-Zdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853" y="931"/>
+        </scene>
+    </scenes>
+</document>
